@@ -1,0 +1,173 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    color: #FFFFFF;
+    /* font-family: "upheavtt"; */
+}
+
+.logo{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.contenedor{
+    background: url("https://i.imgur.com/KGJ9BBt.gif");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center center;
+    
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.hr-custom{
+    height: 2px;
+    display: block; 
+    background-color: rgb(224, 224, 224); 
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 3em;
+}
+
+.login-content{
+    width: 800px;
+    float: right;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: #181818d8;
+    /* box-shadow: -4px 0px 22px 5px #111111; */
+}
+
+.login-card{
+    background-color: #202020;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    width: 450px;
+
+    border-bottom: 5px solid #1975ff;
+    border-right: 5px solid #1975ff;
+    border-left: 5px solid #625985;
+    border-top: 5px solid  #625985;
+}
+
+.register-card{
+    /* border-radius: 5px; */
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 650px;
+    width: 450px;
+
+    border-top: 5px solid #1975ff;
+    border-left: 5px solid #1975ff;
+    border-right: 5px solid #625985;
+    border-bottom: 5px solid  #625985;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.registro-content{
+    text-align: center;
+    width: 90%;
+}
+.margenes{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.div-password{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+a{
+    padding-left: 5px;
+    margin: 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* INPUTS */
+
+.input-login{
+    outline: none;
+    font-size: 1em;
+    border: 3px solid #24106b;
+    padding: 5px;
+    transition:0.3s;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.input-login:focus{
+    color: white;
+    background-color: #402b8b;
+    transition:0.5s;
+    border-radius: 0px;
+}
+
+.button-login{
+    padding: 5px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 70%;
+    transition: 0.3s;
+    background-color: #402b8b;
+    
+    border-bottom: 5px solid #24106b;
+    border-right: 5px solid #24106b;
+    border-left: 5px solid #625985;
+    border-top: 5px solid  #625985;
+}
+
+.button-login:hover{
+
+    transition: 0.5s;
+    background-color: #6884b8;
+    
+    border-bottom: 5px solid #312266;
+    border-right: 5px solid #312266;
+    border-left: 5px solid #534e68;
+    border-top: 5px solid  #534e68;
+
+}
+
+@media (max-width: 630px) {
+    .login-content{
+        width: 100%;
+        padding: 0;
+    }
+
+    .login-card{
+        height: 90%;
+        width: 100%;
+    }
+
+    .register-card{
+        height: 90%;
+    }
+
+
+
+    *{
+        font-size: 1em;
+    }
+}

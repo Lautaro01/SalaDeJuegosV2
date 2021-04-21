@@ -1,0 +1,12 @@
+div{
+    /* Like the header, the footer will have a static height - it shouldn't grow or shrink.  */
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: rgb(39, 39, 39);
+    border-top: 3px solid rgb(24, 24, 24);
+    text-align: center;
+    color: white;
+ }

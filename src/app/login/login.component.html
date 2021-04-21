@@ -1,0 +1,42 @@
+<div class="contenedor">
+    <div class="login-content">
+        <div #login class="login-card animate__animated animate__backInDown" *ngIf="login;else registro">
+            <div class="logo">
+                <h1>Login</h1>
+            </div>
+            <div class="formulario">
+                <input type="text" class="input-login" name="" id="" placeholder="Nombre de Usuario">
+                <div class="div-password">
+                    <input type="password" class="input-login" name="" id="" placeholder="Contraseña"><br>
+                    <a href="http://">Olvide mi contraseña</a>
+                </div>
+                <button class="button-login" [routerLink]="['/home']">Iniciar Sesion</button>
+            </div>
+            <div class="hr-custom">
+            </div>
+            <div class="registro-content">
+                <p>¿Aun no tiene una cuenta?</p>
+                <button class="button-login" (click)="showRegistro()">Registrarme</button>
+            </div>
+        </div>
+
+        <ng-template #registro>
+            <div #registroV2 class="register-card animate__animated animate__backInDown">
+                <div class="logo">
+                    <h1>Registro</h1>
+                </div>
+                <div class="formulario">
+                    <input type="text" class="input-login margenes" name="" id="" placeholder="Nombre de Usuario">
+                    <input type="text" class="input-login margenes" name="" id="" placeholder="Correo Electronico">
+                    <input type="text" class="input-login margenes" name="" id="" placeholder="Contraseña">
+                    <input type="text" class="input-login margenes" name="" id="" placeholder="Repetir contraseña">
+                    <br>
+                    <button class="button-login">Registrarme</button>
+                    <a (click)="showRegistro()"> Volver al login </a>
+                </div>
+            </div>
+        </ng-template>
+        
+    </div>
+</div>
+
