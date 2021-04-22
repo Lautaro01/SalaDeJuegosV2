@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "upheavtt";
-    src: url('../src/assets/Fonts/upheavtt.ttf');
+    src: url('./assets/Fonts/upheavtt.ttf');
 }
 
 *{

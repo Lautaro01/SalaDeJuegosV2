@@ -5,12 +5,12 @@
                 <h1>Login</h1>
             </div>
             <div class="formulario">
-                <input type="text" class="input-login" name="" id="" placeholder="Nombre de Usuario">
+                <input type="text" class="input-login animate__animated" #usernameLogin id="usernameLoginInput" placeholder="Nombre de Usuario">
                 <div class="div-password">
-                    <input type="password" class="input-login" name="" id="" placeholder="Contraseña"><br>
+                    <input type="password" class="input-login animate__animated" #passwordLogin id="passwordLoginInput" placeholder="Contraseña"><br>
                     <a href="http://">Olvide mi contraseña</a>
                 </div>
-                <button class="button-login" [routerLink]="['/home']">Iniciar Sesion</button>
+                <button class="button-login" (click)="logIn()">Iniciar Sesion</button>
             </div>
             <div class="hr-custom">
             </div>
@@ -20,23 +20,31 @@
             </div>
         </div>
 
+
+        <!-- REGISTRO -->
         <ng-template #registro>
             <div #registroV2 class="register-card animate__animated animate__backInDown">
                 <div class="logo">
                     <h1>Registro</h1>
                 </div>
                 <div class="formulario">
-                    <input type="text" class="input-login margenes" name="" id="" placeholder="Nombre de Usuario">
-                    <input type="text" class="input-login margenes" name="" id="" placeholder="Correo Electronico">
-                    <input type="text" class="input-login margenes" name="" id="" placeholder="Contraseña">
-                    <input type="text" class="input-login margenes" name="" id="" placeholder="Repetir contraseña">
+                    <input type="text" class="input-login margenes" #usernameRegister id="usernameRegister" placeholder="Nombre de Usuario">
+                    <input type="email" class="input-login margenes" #emailRegister id="emailRegister" placeholder="Correo Electronico">
+                    <p class="mensajeError">{{mensajeError}}</p>
+                    <input type="password" class="input-login margenes" #passwordRegister id="passwordRegister" placeholder="Contraseña">
+                    <input type="password" class="input-login margenes" #passwordConfirmRegister id="passwordConfirmRegister" placeholder="Repetir contraseña">
                     <br>
-                    <button class="button-login">Registrarme</button>
+                    <button class="button-login" (click)="signIn()">Registrarme</button>
                     <a (click)="showRegistro()"> Volver al login </a>
                 </div>
             </div>
         </ng-template>
-        
+
+        <!-- LOADING -->
+        <div class="spinner-content animate__animated animate__bounceIn" *ngIf="loading">
+            <img src="../../assets/loading.gif" alt="" width="200px" height="200px">
+            <p>Cargando</p>
+        </div>
     </div>
 </div>
 
