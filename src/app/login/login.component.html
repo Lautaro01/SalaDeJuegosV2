@@ -20,7 +20,6 @@
             </div>
         </div>
 
-
         <!-- REGISTRO -->
         <ng-template #registro>
             <div #registroV2 class="register-card animate__animated animate__backInDown">
@@ -30,10 +29,10 @@
                 <div class="formulario">
                     <input type="text" class="input-login margenes" #usernameRegister id="usernameRegister" placeholder="Nombre de Usuario">
                     <input type="email" class="input-login margenes" #emailRegister id="emailRegister" placeholder="Correo Electronico">
-                    <p class="mensajeError">{{mensajeError}}</p>
                     <input type="password" class="input-login margenes" #passwordRegister id="passwordRegister" placeholder="Contraseña">
                     <input type="password" class="input-login margenes" #passwordConfirmRegister id="passwordConfirmRegister" placeholder="Repetir contraseña">
                     <br>
+                    <p class="mensajeError">{{mensajeError}}</p>
                     <button class="button-login" (click)="signIn()">Registrarme</button>
                     <a (click)="showRegistro()"> Volver al login </a>
                 </div>
@@ -43,7 +42,17 @@
         <!-- LOADING -->
         <div class="spinner-content animate__animated animate__bounceIn" *ngIf="loading">
             <img src="../../assets/loading.gif" alt="" width="200px" height="200px">
-            <p>Cargando</p>
+            <p>Cargando...</p>
+        </div>
+
+        
+    </div>
+
+    <div class="free-content">
+        <h1 style="font-size: 5rem; text-align: center;">Sala de Juegos</h1>
+        <div class="modal-card"  *ngIf="usuarioCreado">
+            <h1 style="font-size: 3rem;">¡Cuenta creada con exito!</h1>
+            <p>Gracias por registrarte, "{{usuarioCreado}}" ya puedes iniciar sesion</p>
         </div>
     </div>
 </div>

@@ -11,9 +11,6 @@ export class AuthFirebaseService {
 
   crearUsuario(usuario : string , contraseña : string)
   {
-
-    // console.log(usuario  + " " + contraseña);
-
     return this._e.createUserWithEmailAndPassword(usuario,contraseña);
   }
 }

@@ -5,6 +5,18 @@
     src: url('./assets/Fonts/upheavtt.ttf');
 }
 
+@font-face {
+    font-family: "orbitron";
+    src: url('./assets/Fonts/Orbitron-VariableFont_wght.ttf');
+}
+
 *{
     font-family: "upheavtt";
 }
+
+p,
+input,
+a{
+    font-family: "orbitron";
+}
+

@@ -39,8 +39,14 @@ export class ValidateFormService {
     return inputResponseVar;
   }
 
-    validarInputVacio(input: ElementRef)
-    {
-      return input.nativeElement.value == ""!; 
-    }
+  validarInputVacio(input: ElementRef)
+  {
+    return input.nativeElement.value == ""!; 
+  }
+
+  validarConfirmarContraseña(contraseña : string, contraseña2 : string)
+  {
+    return contraseña === contraseña2;
+  }
+
 }
