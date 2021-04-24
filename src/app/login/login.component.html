@@ -7,8 +7,8 @@
             <div class="formulario">
                 <input type="text" class="input-login animate__animated" #usernameLogin id="usernameLoginInput" placeholder="Nombre de Usuario">
                 <div class="div-password">
-                    <input type="password" class="input-login animate__animated" #passwordLogin id="passwordLoginInput" placeholder="Contraseña"><br>
-                    <a href="http://">Olvide mi contraseña</a>
+                    <input type="password" class="input-login animate__animated" #passwordLogin id="passwordLoginInput" placeholder="Contraseña">
+                    <span class="a-contra">¿Olvidaste la contraseña?<a >Click Aqui</a></span>
                 </div>
                 <button class="button-login" (click)="logIn()">Iniciar Sesion</button>
             </div>
@@ -20,6 +20,37 @@
             </div>
         </div>
 
+        <div class="footer-content">
+            <div class="footer">
+                <!-- <div class="footer-title">
+                    <h2>About</h2>
+                </div>
+                <div class="footer-title">
+                    <h2>Tecnologicas usadas</h2>
+                </div>
+                <div class="footer-title">
+                    <h2>Contacto</h2>
+                </div> -->
+
+                <div class="footer-section">
+                    <h2>About</h2>
+                    <p>Proyecto de portafolio para una pagina de juegos.</p>
+                </div>
+                <div class="footer-section">
+                    <h2>Tecnologicas usadas</h2>
+                    <p>- Angular Framework</p>
+                    <p>- Animate.CSS</p>
+                    <p>- Firebase</p>
+                </div>
+                <div class="footer-section">
+                    <h2>Contacto</h2>
+                    <p><a href="mailto:fernandez.n.lautaro@gmail.com?Subject=Asunto">Fernandez.n.lautaro@gmail.com</a></p>
+                    <p><a href="https://github.com/Lautaro01" target="_blank">Github.com/Lautaro01</a></p>
+                    <p><a href="https://www.linkedin.com/in/lautaro-fern%C3%A1ndez/" target="_blank">linkedin.com/lautaro-fernandez</a></p>
+
+                </div>
+            </div>
+        </div>
         <!-- REGISTRO -->
         <ng-template #registro>
             <div #registroV2 class="register-card animate__animated animate__backInDown">

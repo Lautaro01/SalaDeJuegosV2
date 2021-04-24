@@ -10,13 +10,18 @@
     src: url('./assets/Fonts/Orbitron-VariableFont_wght.ttf');
 }
 
-*{
+h1,
+button{
     font-family: "upheavtt";
 }
 
-p,
+button{
+    letter-spacing: 3px;
+}
+
+/* p,
 input,
 a{
     font-family: "orbitron";
-}
+} */
 

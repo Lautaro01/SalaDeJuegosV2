@@ -36,27 +36,71 @@ h1{
 }
 
 .login-content{
+
     width: 800px;
-    float: right;
-    padding: 20px;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    float: right;
+
+    display:grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-template-rows: repeat(4,1fr);
+
+    /* align-items: center;
+    justify-content: center; */
     backdrop-filter: blur(5px);
     background-color: #181818d8;
-    /* box-shadow: -4px 0px 22px 5px #111111; */
 }
 
-.login-card{
-    background-color: #202020;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    height: 600px;
-    width: 450px;
+.footer-content{
+    grid-row: 4;
 
+    padding: 2rem;
+
+    padding-bottom: 1rem;
+    font-size: 1rem;
+
+    width: 100%;
+    background-color: rgb(17, 17, 17);
+}
+
+.footer{
+    grid-gap: 10px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "s s s";
+
+    height: 100%;
+}
+
+
+.footer-section{
+    grid-area: "s";
+} 
+
+
+.footer-section p,
+.footer-section a{
+    color: #737373;
+    font-size: 0.9rem;
+}
+
+
+.login-card{
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    
+    margin: auto;
+    height: 600px;
+    /* width: 450px; */
+    grid-row: 2;
+    
+    background-color: #202020;
     border-bottom: 5px solid #1975ff;
     border-right: 5px solid #1975ff;
     border-left: 5px solid #625985;
@@ -64,16 +108,23 @@ h1{
 }
 
 .register-card{
-    /* border-radius: 5px; */
-    background-color: #202020;
+
     display: flex;
     flex-direction: column;
+    
     align-items: center;
+    justify-content: center;
+
+    grid-row: 2;
+    
+    
     /* height: 650px; */
+    margin: auto;
     width: 450px;
-
+    
     padding-bottom: 1rem;
-
+    
+    background-color: #202020;
     border-top: 5px solid #1975ff;
     border-left: 5px solid #1975ff;
     border-right: 5px solid #625985;
@@ -99,6 +150,7 @@ h1{
     margin-bottom: 1rem;
     margin-top: 1rem;
     width: 100%;
+    text-align: start;
 }
 
 a{
@@ -109,6 +161,11 @@ a{
 }
 
 /* INPUTS */
+.a-contra{
+    color: rgb(204, 204, 204);
+    text-align: end;
+    font-size: 1rem;
+}
 
 .input-login{
     width: 100%;
@@ -213,10 +270,48 @@ a{
     background-color: rgb(41, 41, 41);
 }
 
-@media (max-width: 630px) {
+@media (max-width: 1100px) {
+    .free-content{
+        display: none;
+    }
+
     .login-content{
         width: 100%;
+    }
+}
+
+@media (max-width: 630px) {
+
+    .login-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         padding: 0;
+    }
+    
+    .login-card,
+    .register-card{
+        height: 100%;
+        border: none;
+    }
+
+    .register-card{
+        width: 100%;
+    }
+
+    .footer-content{
+        padding: 1rem;
+        overflow: scroll;
+    }
+
+    .footer{
+
+       grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        "s"
+        "s"
+        "s";
+        overflow: scroll;
     }
 
     .logo{
@@ -224,14 +319,7 @@ a{
         margin-bottom: 1rem;
     }
 
-    .login-card{
-        height: 100%;
-        width: 100%;
-    }
 
-    .register-card{
-        height: 100%;
-    }
 
     .input-login{
         width: 100%;
@@ -248,13 +336,6 @@ a{
     h1{
         font-size: 3rem;
     }
-
-    /* .margenes{
-        margin-top: 5%;
-    } */
-    /* button{
-        font-size: 1.2rem;
-    } */
 }
 
 @media (max-height: 570px){
