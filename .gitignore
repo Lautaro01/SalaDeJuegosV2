@@ -1,8 +1,10 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-firebase-config.ts
 
 # compiled output
+*.firebase-config.ts
+firebase.json
+
 /dist
 /tmp
 /out-tsc
